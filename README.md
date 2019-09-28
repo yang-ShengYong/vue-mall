@@ -1,2 +1,5 @@
 ### vue商城项目
-修改了readme
+- 首页
+  - header Mint-ui
+  - 
+  - tabbar Mui

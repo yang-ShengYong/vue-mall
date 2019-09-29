@@ -9,42 +9,42 @@
     <!-- 六宫格 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newslist">
           <span class="mui-icon mui-icon-list"></span>
           <div class="mui-media-body">新鲜资讯</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/">
           <span class="mui-icon mui-icon-image">
             <span class="mui-badge">5</span>
           </span>
           <div class="mui-media-body">图片秀</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/">
           <span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/">
           <span class="mui-icon mui-icon-chatbubble"></span>
           <div class="mui-media-body">留言反馈</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/">
           <span class="mui-icon mui-icon-videocam"></span>
           <div class="mui-media-body">视频专区</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/">
           <span class="mui-icon mui-icon-weixin"></span>
           <div class="mui-media-body">商业合作</div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>

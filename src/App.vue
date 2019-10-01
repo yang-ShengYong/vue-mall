@@ -19,7 +19,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-ysy" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge">9</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge" v-show="shopCarFlag">{{ shopCarCount }}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-ysy" to="/search">
@@ -31,7 +31,20 @@
 </template>
 
 <script>
-
+export default {
+	data () {
+		return {
+			shopCarFlag: false,
+			shopCarCount: 0
+		}
+	},
+	created () {
+		if (this.$store.getters.getAllCount > 0) {
+			this.shopCarFlag = true
+			this.shopCarCount = this.$store.getters.getAllCount
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>

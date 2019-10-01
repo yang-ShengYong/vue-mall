@@ -59,7 +59,8 @@
 </template>
 
 <script>
-import Swiper from "../subcomponents/Swiper.vue";
+import Swiper from "../subcomponents/Swiper.vue"
+import mui from '../../lib/mui/js/mui.min.js'
 
 export default {
   data() {
@@ -71,6 +72,9 @@ export default {
   },
   created() {
     this.getLunbotu();
+  },
+  mounted () {
+    mui('.mui-numbox').numbox()
   },
   methods: {
     getLunbotu() {
@@ -89,6 +93,16 @@ export default {
     },
     addShopcar() {
       this.ballFlag = true;
+      // 获取商品对象
+      var goodsinfo = {
+        id: 123,
+        title: '《向诸葛亮借智慧》',
+        count: this.selectedCount,
+        price: 89,
+        selected: true
+      }
+      this.$store.commit('addToCar', goodsinfo)
+      document.getElementById("badge").innerText = this.$store.getters.getAllCount
     },
     countChanged () {
       this.selectedCount = parseInt(this.$refs.numbox.value)

@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 import VueResource from 'vue-resource'
 Vue.use(VueResource )
 
+
 //导入mint-ui组件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
@@ -15,9 +16,11 @@ import './lib/mui/css/icons-extra.css'
 
 import app from './App.vue'
 import router from './router.js'
+import store from './store.js'
 
 var vm = new Vue({
   el: '#app',
   router,
+  store,
   render: c => c(app)
 })

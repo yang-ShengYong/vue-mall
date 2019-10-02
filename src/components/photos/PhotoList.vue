@@ -21,7 +21,7 @@
     <!-- 图片列表区域 -->
     <ul class="photo-list">
       <li v-for="item in photoList" :key="item.id">
-        <img v-lazy="item.img" />
+        <img v-lazy="item.img"/>
       </li>
     </ul>
   </div>
@@ -49,10 +49,11 @@ export default {
       this.$http
         .post(
           "https://api.apiopen.top/getImages",
-          { page: 1, count: 1 },
-          { emulatedJSON: true }
+          { page: 2,count: 200 },
+          { emulateJSON: true }
         )
         .then(result => {
+          console.log(result)
           if (result.status === 200) {
             this.photoList = result.body.result;
           } else {

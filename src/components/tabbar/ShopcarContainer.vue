@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     countChanged (id) {
-      const newCount = this.$refs[id+''][0].value
+      const newCount = parseInt(this.$refs[id+''][0].value)
       this.$store.commit('correctCountById', {
         id,
         newCount

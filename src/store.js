@@ -48,7 +48,7 @@ var store = new Vuex.Store({
     correctCountById(state, obj) {
       state.car.some(item => {
         if (item.id == obj.id) {
-          item.count = obj.newCount
+          item.count = parseInt(obj.newCount)
           return true
         }
       })

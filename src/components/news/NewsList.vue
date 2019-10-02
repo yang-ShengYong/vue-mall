@@ -37,7 +37,7 @@ export default {
   methods: {
     getNewsList() {
       this.$http.get("https://www.apiopen.top/journalismApi").then(result => {
-        console.log(result);
+        // console.log(result);
         if (result.status === 200) {
           this.newsList = result.body.data;
         } else {
